@@ -1,0 +1,7 @@
+{
+  "name": "The Hair Story - Best Salon in Jamshedpur",
+  "description": "The Hair Story is the best salon in Jamshedpur, offering premium bridal makeup, Botox treatments, Nanoplastia, and expert hair care services.",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}
