@@ -60,27 +60,19 @@ const SERVICES = [
     icon: <Star className="w-6 h-6" />,
   },
   {
-    id: 'wigs',
-    title: 'Hair Wig Studio',
-    hindi: 'हेयर विग स्टूडियो',
-    description: 'Premium quality hair wigs and patches with professional fitting.',
-    time: '1-2 hours',
-    icon: <User className="w-6 h-6" />,
-  },
-  {
-    id: 'grooming',
-    title: 'Men\'s Grooming',
-    hindi: 'मेंस ग्रूमिंग',
-    description: 'Beard styling, shaves, and grooming services for the modern man.',
-    time: '30-45 min',
-    icon: <User className="w-6 h-6" />,
-  },
-  {
-    id: 'nailart',
-    title: 'Nail Art & Extensions',
-    hindi: 'नेल आर्ट और एक्सटेंशन',
-    description: 'Creative nail designs and professional extensions for a polished look.',
+    id: 'botox',
+    title: 'Botox Treatment',
+    hindi: 'बोटोक्स ट्रीटमेंट',
+    description: 'Professional botox treatments for rejuvenated and youthful skin.',
     time: '60-90 min',
+    icon: <Sparkles className="w-6 h-6" />,
+  },
+  {
+    id: 'nanoplastia',
+    title: 'Nanoplastia',
+    hindi: 'नैनोप्लास्टिया',
+    description: 'Advanced hair treatment for smooth, straight, and healthy hair.',
+    time: '3-4 hours',
     icon: <Sparkles className="w-6 h-6" />,
   },
 ];
@@ -93,7 +85,7 @@ const REVIEWS = [
   },
   {
     name: 'Ashutosh Kumar',
-    text: 'Such a warm and welcoming experience at keratin care unisex salon . From the moment I walked in, the staff made me feel comfortable and pampered. Special shoutout to Staff for being so attentive and skilled.',
+    text: 'Such a warm and welcoming experience at The Hair Story . From the moment I walked in, the staff made me feel comfortable and pampered. Special shoutout to Staff for being so attentive and skilled.',
     rating: 5,
   },
   {
@@ -119,13 +111,13 @@ const Logo = ({ scrolled }: { scrolled: boolean }) => (
       <div className={`absolute inset-0 rounded-full border-2 transition-colors duration-500 ${scrolled ? 'border-primary' : 'border-white'}`}></div>
       {/* Inner Circle with M and Scissors */}
       <div className="relative flex items-center justify-center">
-        <span className={`text-2xl md:text-3xl font-serif font-bold transition-colors duration-500 ${scrolled ? 'text-secondary' : 'text-white'}`}>M</span>
+        <span className={`text-2xl md:text-3xl font-serif font-bold transition-colors duration-500 ${scrolled ? 'text-secondary' : 'text-white'}`}>H</span>
         <Scissors className={`absolute w-4 h-4 md:w-5 md:h-5 -right-1 -bottom-1 transition-colors duration-500 ${scrolled ? 'text-primary' : 'text-primary'}`} />
       </div>
     </div>
     <div className="flex flex-col">
       <span className={`text-xl md:text-2xl font-serif font-bold tracking-tighter transition-colors duration-500 ${scrolled ? 'text-secondary' : 'text-white'}`}>
-        Keratin Care
+        The Hair Story
       </span>
       <span className={`text-[8px] uppercase tracking-[0.3em] font-bold ${scrolled ? 'text-primary' : 'text-primary'}`}>
         Unisex Salon
@@ -235,13 +227,13 @@ export default function App() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, ease: "easeOut" }}
           >
-            <span className="section-subtitle !text-white/80 mb-6 block">Est. 2010 • Ranchi</span>
+            <span className="section-subtitle !text-white/80 mb-6 block">Est. 2010 • Jamshedpur</span>
             <h1 className="text-5xl md:text-8xl lg:text-9xl font-serif text-white leading-[0.9] mb-8">
-              Keratin Care <br />
+              The Hair Story <br />
               <span className="gold-text-gradient italic">Unisex Salon</span>
             </h1>
             <p className="text-white/70 text-lg md:text-xl max-w-2xl mx-auto mb-12 font-light tracking-wide leading-relaxed">
-              Premium beauty and wellness services in the heart of Ranchi. 
+              Premium beauty and wellness services in the heart of Jamshedpur. 
               Expert hair artistry, skin rituals, and professional keratin treatments.
             </p>
             
@@ -375,13 +367,13 @@ export default function App() {
                   <div className="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center">
                     <Phone className="w-4 h-4 text-primary" />
                   </div>
-                  <span className="text-sm font-medium">0651 233 2663</span>
+                  <span className="text-sm font-medium">087892 92516</span>
                 </div>
                 <div className="flex items-center space-x-4 text-white/80">
                   <div className="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center">
                     <MapPin className="w-4 h-4 text-primary" />
                   </div>
-                  <span className="text-sm font-medium">Shop No: 106 Ranchi Club Shopping Complex Mahatma Gandhi Main Road, Sujata Chowk, Ranchi</span>
+                  <span className="text-sm font-medium">1st Floor, H.S Tower, L Rd, above Host Restaurant, Bistupur, Jamshedpur, Jharkhand 831001</span>
                 </div>
               </div>
             </div>
@@ -460,6 +452,55 @@ export default function App() {
         </div>
       </section>
 
+      {/* Founder Section */}
+      <section className="py-32 bg-white overflow-hidden">
+        <div className="container mx-auto px-6">
+          <div className="flex flex-col lg:flex-row items-center gap-20">
+            <motion.div 
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              className="lg:w-1/2 relative"
+            >
+              <div className="absolute -top-10 -left-10 w-64 h-64 bg-primary/5 rounded-full -z-10"></div>
+              <div className="relative rounded-[40px] overflow-hidden shadow-2xl">
+                <img 
+                  src="https://res.cloudinary.com/dn6sk8mqh/image/upload/v1774930311/Screenshot_2026-03-31_094116_oowvic.png" 
+                  alt="Sunny Jaiswal - Founder" 
+                  className="w-full h-auto object-cover"
+                  referrerPolicy="no-referrer"
+                />
+              </div>
+              <div className="absolute -bottom-10 -right-10 luxury-glass p-8 rounded-3xl hidden md:block">
+                <div className="text-primary font-serif text-4xl mb-2">15+</div>
+                <div className="text-[10px] uppercase tracking-widest font-bold text-white/60">Years of Artistry</div>
+              </div>
+            </motion.div>
+            
+            <motion.div 
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              className="lg:w-1/2"
+            >
+              <span className="section-subtitle">The Visionary</span>
+              <h2 className="section-title">Sunny Jaiswal</h2>
+              <p className="text-primary font-serif text-2xl italic mb-8">Founder & Master Stylist</p>
+              <p className="text-gray-500 text-lg leading-relaxed mb-8">
+                With a passion for transformation and an eye for detail, Sunny Jaiswal founded The Hair Story to bring world-class beauty rituals to Jamshedpur. His vision was simple: to create a sanctuary where artistry meets excellence.
+              </p>
+              <p className="text-gray-500 text-lg leading-relaxed mb-12">
+                "Every client has a unique story, and we are here to help them tell it through their style. At The Hair Story, we don't just provide services; we craft experiences that empower and inspire."
+              </p>
+              <div className="flex items-center space-x-8">
+                <div className="h-[1px] w-20 bg-primary"></div>
+                <span className="font-serif text-3xl italic text-secondary">Sunny Jaiswal</span>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
       {/* Location Section */}
       <section id="location" className="py-32 bg-white">
         <div className="container mx-auto px-6">
@@ -469,8 +510,8 @@ export default function App() {
               <span className="section-subtitle">Location</span>
               <h2 className="section-title">Visit Our Sanctuary</h2>
               <p className="text-gray-500 text-lg mb-12 leading-relaxed">
-                Located in the prestigious Ranchi Club Shopping Complex on MG Main Road, our salon offers a premium retreat for all your beauty needs. 
-                Experience luxury that's conveniently located in the heart of Ranchi.
+                Located in the prestigious H.S Tower in Bistupur, our salon offers a premium retreat for all your beauty needs. 
+                Experience luxury that's conveniently located in the heart of Jamshedpur.
               </p>
               
               <div className="space-y-10">
@@ -481,9 +522,9 @@ export default function App() {
                   <div>
                     <h4 className="text-xl font-serif text-secondary mb-2">The Address</h4>
                     <p className="text-gray-500 text-sm leading-relaxed">
-                      Shop No: 106 Ranchi Club Shopping Complex,<br />
-                      Mahatma Gandhi Main Road, Sujata Chowk,<br />
-                      Ranchi, Jharkhand 834001
+                      1st Floor, H.S Tower, L Rd,<br />
+                      above Host Restaurant, Bistupur,<br />
+                      Jamshedpur, Jharkhand 831001
                     </p>
                   </div>
                 </div>
@@ -494,7 +535,7 @@ export default function App() {
                   <div>
                     <h4 className="text-xl font-serif text-secondary mb-2">Hours of Service</h4>
                     <p className="text-gray-500 text-sm leading-relaxed">
-                      Daily: 10:00 AM — 09:00 PM<br />
+                      Daily: Opens 10:00 AM<br />
                       <span className="text-primary font-bold uppercase tracking-widest text-[10px]">Open All Week</span>
                     </p>
                   </div>
@@ -502,8 +543,8 @@ export default function App() {
               </div>
 
               <div className="mt-16 flex flex-wrap gap-6">
-                <a href="https://www.google.com/maps/search/?api=1&query=Keratin+Care+Unisex+Salon+Ranchi" target="_blank" className="btn-luxury">Get Directions</a>
-                <a href="tel:06512332663" className="flex items-center text-sm font-bold uppercase tracking-widest text-secondary hover:text-primary transition-colors">
+                <a href="https://www.google.com/maps/search/?api=1&query=The+Hair+Story+Bistupur+Jamshedpur" target="_blank" className="btn-luxury">Get Directions</a>
+                <a href="tel:08789292516" className="flex items-center text-sm font-bold uppercase tracking-widest text-secondary hover:text-primary transition-colors">
                   <Phone className="w-5 h-5 mr-3 text-primary" />
                   Contact Concierge
                 </a>
@@ -512,7 +553,7 @@ export default function App() {
 
             <div className="h-[600px] rounded-[40px] overflow-hidden shadow-2xl grayscale hover:grayscale-0 transition-all duration-1000">
               <iframe 
-                src="https://maps.google.com/maps?q=Keratin%20Care%20Unisex%20Salon%20Ranchi%20Club&t=&z=15&ie=UTF8&iwloc=&output=embed" 
+                src="https://maps.google.com/maps?q=The+Hair+Story+Bistupur+Jamshedpur&t=&z=15&ie=UTF8&iwloc=&output=embed" 
                 width="100%" 
                 height="100%" 
                 style={{ border: 0 }} 
@@ -531,7 +572,7 @@ export default function App() {
             <div className="space-y-8">
               <Logo scrolled={false} />
               <p className="text-white/40 text-sm leading-relaxed">
-                Since 2010, we have been the benchmark of beauty in Ranchi. 
+                Since 2010, we have been the benchmark of beauty in Jamshedpur. 
                 Join us for an unparalleled experience of luxury and care.
               </p>
               <div className="flex space-x-6">
@@ -573,7 +614,7 @@ export default function App() {
           </div>
 
           <div className="pt-12 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-8 text-[10px] uppercase tracking-[0.2em] text-white/20">
-            <p>© 2026 Keratin Care Unisex Salon. Crafted for Excellence.</p>
+            <p>© 2026 The Hair Story Unisex Salon. Crafted for Excellence.</p>
             <div className="flex space-x-10">
               <a href="#" className="hover:text-white transition-colors">Privacy</a>
               <a href="#" className="hover:text-white transition-colors">Terms</a>
@@ -585,7 +626,7 @@ export default function App() {
 
       {/* Floating Concierge */}
       <div className="fixed bottom-10 right-10 z-50 hidden md:block">
-        <a href="tel:06512332663" className="luxury-glass p-4 rounded-full flex items-center space-x-4 group hover:bg-white/20 transition-all">
+        <a href="tel:08789292516" className="luxury-glass p-4 rounded-full flex items-center space-x-4 group hover:bg-white/20 transition-all">
           <div className="w-12 h-12 rounded-full gold-gradient flex items-center justify-center shadow-lg">
             <Phone className="w-6 h-6 text-white" />
           </div>
